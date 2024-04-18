@@ -6,6 +6,11 @@ void main(){
     MaterialApp(
 
       title: "Frases do Dia",
-      home: Container(color: Colors.green,),
+      home: Column(children: <Widget>[
+        Text("T1"),
+        Text("T2"),
+        Text("T3"),
+        ],
+      ),
     ));
 }
