@@ -6,6 +6,6 @@ void main(){
     MaterialApp(
 
       title: "Frases do Dia",
-      home: Container(color: Colors.white,),
+      home: Container(color: Colors.green,),
     ));
 }
