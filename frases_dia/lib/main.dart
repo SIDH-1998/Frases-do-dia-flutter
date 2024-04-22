@@ -6,44 +6,28 @@ import 'package:flutter/material.dart';
 */
 
 void main(){
+  runApp(const MaterialApp(
+    home: Home(),
+    debugShowCheckedModeBanner: false,
 
-  runApp(
-
-    const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeStateful(),
-    ));
+  ));
 }
-
-class HomeStateful extends StatefulWidget {
-  const HomeStateful({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<HomeStateful> createState() => _HomeStatefulState();
+  State<Home> createState() => _HomeState();
 }
 
-class _HomeStatefulState extends State<HomeStateful> {
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-
-    var _texto = "Sidiomar";
-
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text ("titulo"),
-        backgroundColor: Colors.greenAccent,
+        title: const Text("Gerar Frases"),
+        backgroundColor: Colors.lightGreenAccent,
       ),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            ElevatedButton(
-                onPressed: (){},
-              child: Text("Clique Aqui!"),
-            ),
-            Text("Nome: $_texto"),
-          ],
-        ),
-      ),
+      body: Container(),
     );
   }
 }
