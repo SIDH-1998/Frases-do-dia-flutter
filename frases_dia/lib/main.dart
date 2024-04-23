@@ -27,7 +27,17 @@ class _HomeState extends State<Home> {
         title: const Text("Gerar Frases"),
         backgroundColor: Colors.lightGreenAccent,
       ),
-      body: Container(),
+      body: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          border: Border.all(width: 3, color: Colors.grey)
+        ),
+        child: Column(
+          children: <Widget>[
+            Image.asset("imagem/logo.png"),
+          ],
+        ),
+      ),
     );
   }
 }
