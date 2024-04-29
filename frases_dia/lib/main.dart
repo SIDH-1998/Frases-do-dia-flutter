@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 /*
 * Stateless -> Widgets que não podem ser Alterados (constantes)
@@ -20,6 +21,29 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  final _frases = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+  ];
+
+  var _fraseGerada = "Clique Abaixo Para Gerar uma Frase!";
+
+  void _gerarFrases(){
+
+    var numeroSorteado = Random().nextInt(_frases.length);
+
+    setState(() {
+      _fraseGerada = _frases[numeroSorteado];
+    });
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,18 +62,18 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Image.asset("imagem/logo.png"),
-            const Text(
-                "Clique Abaixo para Gerar uma Frase!",
+            Text(
+                _fraseGerada,
               textAlign: TextAlign.justify,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 25,
                 fontStyle: FontStyle.italic,
                 color: Colors.black,
               ),
             ),
-            const ElevatedButton(
-                onPressed: null,
-                child: Text(
+            ElevatedButton(
+                onPressed: _gerarFrases,
+                child: const Text(
                     "Nova Frase",
                   style: TextStyle(
                     fontSize: 30,
