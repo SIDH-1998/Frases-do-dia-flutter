@@ -23,8 +23,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   final _frases = [
-    "1",
-    "2",
+    "Você é especial",
+    "tu és chata",
     "3",
     "4",
     "5",
